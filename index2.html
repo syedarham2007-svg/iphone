@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arham Coffee - Antigravity Experience</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #faf7f3, #ffffff);
+            overflow-x: hidden;
+            color: #222;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #d97706;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 120px 8%;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero-text h1 {
+            font-size: 70px;
+            line-height: 1;
+        }
+
+        .hero-text span {
+            color: #d97706;
+        }
+
+        .hero-text p {
+            margin: 25px 0;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #d97706;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .cup {
+            position: absolute;
+            width: 300px;
+            top: 120px;
+            left: 100px;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .15));
+        }
+
+        .bean {
+            position: absolute;
+            width: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .bean1 {
+            top: 40px;
+            left: 60px;
+        }
+
+        .bean2 {
+            top: 100px;
+            right: 70px;
+        }
+
+        .bean3 {
+            bottom: 90px;
+            left: 20px;
+        }
+
+        .bean4 {
+            bottom: 50px;
+            right: 80px;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        .features {
+            padding: 100px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #d97706;
+        }
+
+        .menu {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .item {
+            background: white;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .item h4 {
+            margin-top: 15px;
+        }
+
+        .price {
+            color: #d97706;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #111;
+            color: white;
+            margin-top: 80px;
+        }
+
+        @media(max-width:900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 50px;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Arham Coffee</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>ANTI <span>GRAVITY</span><br>Coffee Experience</h1>
+
+            <p>
+                Premium roasted coffee served with a futuristic
+                café experience. Taste the perfect blend of aroma,
+                creativity and innovation.
+            </p>
+
+            <a href="#" class="btn">Order Now</a>
+        </div>
+
+        <div class="hero-image">
+
+            <img class="cup" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Coffee Cup">
+
+            <img class="bean bean1" src="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+
+            <img class="bean bean2" src="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+
+            <img class="bean bean3" src="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+
+            <img class="bean bean4" src="https://cdn-icons-png.flaticon.com/512/924/924514.png">
+
+        </div>
+
+    </section>
+
+    <section class="features">
+
+        <div class="card">
+            <h3>☕ Premium Beans</h3>
+            <p>Freshly roasted coffee beans sourced worldwide.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Fast Delivery</h3>
+            <p>Hot coffee delivered straight to your doorstep.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌎 Organic Coffee</h3>
+            <p>100% sustainable and eco-friendly farming.</p>
+        </div>
+
+    </section>
+
+    <section class="menu">
+
+        <h2>Popular Menu</h2>
+
+        <div class="menu-grid">
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+                <h4>Cappuccino</h4>
+                <div class="price">$4.99</div>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800">
+                <h4>Latte</h4>
+                <div class="price">$5.49</div>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800">
+                <h4>Mocha</h4>
+                <div class="price">$5.99</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 SAN Coffee • Antigravity Coffee Experience
+    </footer>
+
+</body>
+
+</html>
